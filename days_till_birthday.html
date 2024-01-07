@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Дни до дня рождения</title>
+    <style>
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 60px;
+        }
+
+        .input,
+        form {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .input-date {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        label,
+        #birthdayDate {
+            font-size: 20px;
+            width: 410px;
+        }
+
+        #errorMessage {
+            margin-top: 5px;
+            color: red;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            width: 250px;
+            height: 80x;
+            border-radius: 5px;
+            font-size: 30px;
+            font-weight: 600;
+            transition: 0.1s;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        button:active {
+            transform: scale(1.05);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 30px;
+            margin-top: 50px;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <h1>Дни до дня рождения</h1>
+    <div class="input">
+    <div class="input-date">
+    <label for="birthdayDate">Дата вашего рождения в текущем году:</label>
+    <input type="datetime-local" id="birthdayDate"/>
+
+    </div>
+
+    <button onclick="calculateDaysTillBirthday();">Посчитать</button>
+    </div>
+
+    <div id="errorMessage"></div>
+    <h2 id="result"></h2>
+
+    <form action="" method=GET>
+        <input id="clear" type="submit" value="Очистить поле ввода">
+    </form>
+
+<script src="./script.js"></script>
+</body>
+</html>
